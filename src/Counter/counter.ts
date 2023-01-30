@@ -10,8 +10,8 @@ const printCount = ({element, counter}: PrintCountProps) => {
 export const setCounter = (count: number) => count * 10;
 
 export const setupCounter = (element: HTMLButtonElement) => {
-  let counter: number = 0;
-  let timesClicked: number = 0;
+  let counter = 0;
+  let timesClicked = 0;
 
   element.addEventListener('click', () => {
     timesClicked++;

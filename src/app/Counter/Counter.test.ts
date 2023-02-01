@@ -1,4 +1,4 @@
-import {setCounter} from './counter';
+import {setCounter} from './Counter';
 
 interface TestDataProps {
   input: number;
@@ -29,7 +29,11 @@ const testData: TestDataProps[] = [
 ];
 
 describe('setCounter()', () => {
-  test.each(testData)('returns $expectedOutput for setCounter($input)', ({input, expectedOutput}) => {
-    expect(setCounter(input)).toEqual(expectedOutput);
-  });
+  test.each(testData)(
+    'returns $expectedOutput for setCounter($input)',
+    ({input, expectedOutput}) => {
+      expect(setCounter(input)).toEqual(expectedOutput);
+    }
+  );
 });
+

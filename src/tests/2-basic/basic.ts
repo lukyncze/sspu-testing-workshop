@@ -1,4 +1,4 @@
-export function hasExactString(arr: Array<unknown>, str: string): boolean {
+export function hasExactString(arr: string[], str: string): boolean {
   return arr.includes(str);
 }
 

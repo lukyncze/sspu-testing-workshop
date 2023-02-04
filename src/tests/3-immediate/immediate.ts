@@ -1,4 +1,4 @@
-export function parseString(str: string): unknown {
-  return JSON.parse(str);
+export function setCounter(input: number): number {
+  return input * 10;
 }
 

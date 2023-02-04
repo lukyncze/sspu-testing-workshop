@@ -1,29 +1,27 @@
-interface PrintCountProps {
-  element: HTMLButtonElement;
-  counter: number;
+class Counter {
+  private counter = 0;
+  private timesClicked = 0;
+  private element: HTMLButtonElement;
+
+  constructor(element: HTMLButtonElement) {
+    this.element = element;
+    this.printCount();
+  }
+
+  private updateCounter() {
+    this.timesClicked++;
+    this.counter = this.timesClicked * 10;
+    this.printCount();
+  }
+
+  private printCount() {
+    this.element.innerHTML = `count is ${this.counter}`;
+  }
+
+  public handleClick = () => {
+    this.updateCounter();
+  };
 }
 
-const printCount = ({element, counter}: PrintCountProps) => {
-  element.innerHTML = `count is ${counter}`;
-};
-
-export const setCounter = (count: number) => count * 10;
-
-export const setupCounter = (element: HTMLButtonElement) => {
-  let counter = 0;
-  let timesClicked = 0;
-
-  element.addEventListener('click', () => {
-    timesClicked++;
-    printCount({element, counter});
-    counter = setCounter(timesClicked);
-  });
-
-  initialization({element, counter});
-};
-
-const initialization = ({element, counter}: PrintCountProps) => {
-  setCounter(0);
-  printCount({element, counter});
-};
+export default Counter;
 

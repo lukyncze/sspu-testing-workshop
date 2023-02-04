@@ -9,6 +9,9 @@ describe('Shopping list', () => {
     it('should be empty', () => {
       expect(emptyShoppingList).toHaveLength(0);
     });
+
+    // TODO: write a test that checks if the list is not empty after adding an item
+    // + write a test that checks if the list contains the item that was added
   });
 
   describe('when the shopping list is not empty', () => {
@@ -19,6 +22,8 @@ describe('Shopping list', () => {
     it(`should not have a cocoa on it`, () => {
       expect(shoppingList).not.toContain('cocoa');
     });
+
+    // TODO: write a test that checks the length of the list if we add item(s)
   });
 });
 

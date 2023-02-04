@@ -1,38 +1,50 @@
-import {hasExactString} from './basic';
+import {containsDuplicate, hasExactString} from './basic';
 
 const shoppingList = ['diapers', 'kleenex', 'trash bags', 'paper towels', 'beer'];
 
 describe('the shopping list', () => {
-  test('should have beer on it', () => {
+  it('should have a beer on it', () => {
     expect(shoppingList).toContain('beer');
   });
 
-  test(`should not have cocoa on it`, () => {
+  it(`should not have a cocoa on it`, () => {
     expect(shoppingList).not.toContain('cocoa');
   });
 });
 
 describe('hasExactString', () => {
   describe('should return true when list contains', () => {
-    test('beer', () => {
+    it('beer', () => {
       expect(hasExactString(shoppingList, 'beer')).toBe(true);
     });
 
-    test('diapers', () => {
+    it('diapers', () => {
       expect(hasExactString(shoppingList, 'diapers')).toBe(true);
     });
   });
 
   describe('should return false when list does not contain', () => {
-    test('steak', () => {
+    it('steak', () => {
       expect(hasExactString(shoppingList, 'steak')).toBe(false);
     });
 
-    test('milk', () => {
+    it('milk', () => {
       expect(hasExactString(shoppingList, 'milk')).toBe(false);
     });
   });
+
+  it('should return false when the list is empty', () => {
+    expect(hasExactString([], 'beer')).toBe(false);
+  });
 });
 
-export {};
+describe('containsDuplicate', () => {
+  it('should return true when there is a duplicate number', () => {
+    expect(containsDuplicate([5, 2, 4, 2, 3, 1])).toBe(true);
+  });
+
+  it('should return false when there is not a duplicate number', () => {
+    expect(containsDuplicate([1, 2, 3, 4, 5, 6])).toBe(false);
+  });
+});
 

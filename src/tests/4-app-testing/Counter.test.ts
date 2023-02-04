@@ -1,4 +1,4 @@
-import {setCounter} from './Counter';
+import {setCounter} from '../../app/Counter';
 
 interface TestDataProps {
   input: number;

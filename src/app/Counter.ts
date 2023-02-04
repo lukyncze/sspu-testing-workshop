@@ -19,6 +19,10 @@ export const setupCounter = (element: HTMLButtonElement) => {
     counter = setCounter(timesClicked);
   });
 
+  initialization({element, counter});
+};
+
+const initialization = ({element, counter}: PrintCountProps) => {
   setCounter(0);
   printCount({element, counter});
 };

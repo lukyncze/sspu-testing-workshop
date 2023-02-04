@@ -1,5 +1,4 @@
 class Counter {
-  private counter = 0;
   private timesClicked = 0;
   private element: HTMLButtonElement;
 
@@ -10,12 +9,11 @@ class Counter {
 
   private updateCounter() {
     this.timesClicked++;
-    this.counter = this.timesClicked * 10;
     this.printCount();
   }
 
   private printCount() {
-    this.element.innerHTML = `count is ${this.counter}`;
+    this.element.innerHTML = `Count is ${this.timesClicked * 10}`;
   }
 
   public handleClick = () => {

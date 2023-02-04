@@ -32,29 +32,31 @@ describe('Counter', () => {
   });
 
   it('should have right button label when initialized', () => {
-    expect(element.innerHTML).toBe('count is 0');
+    expect(element.innerHTML).toBe('Count is 0');
   });
 
-  it('should increment the counter when clicking on the button', () => {
-    expect(element.innerHTML).toBe('count is 0');
-    expect(counter['timesClicked']).toBe(0);
+  describe('when user clicks on it button', () => {
+    it('should have correct button text', () => {
+      expect(counter['timesClicked']).toBe(0);
+      expect(element.innerHTML).toBe('Count is 0');
 
-    counter.handleClick();
-    expect(element.innerHTML).toBe('count is 10');
-    expect(counter['timesClicked']).toBe(1);
-
-    counter.handleClick();
-    expect(element.innerHTML).toBe('count is 20');
-    expect(counter['timesClicked']).toBe(2);
-  });
-
-  it('should be clicked 25 times and have right button label', () => {
-    for (let i = 0; i < 25; i++) {
       counter.handleClick();
-    }
+      expect(counter['timesClicked']).toBe(1);
+      expect(element.innerHTML).toBe('Count is 10');
 
-    expect(counter['timesClicked']).toBe(25);
-    expect(element.innerHTML).toBe('count is 250');
+      counter.handleClick();
+      expect(counter['timesClicked']).toBe(2);
+      expect(element.innerHTML).toBe('Count is 20');
+    });
+
+    it('should have the right number of clicks', () => {
+      for (let i = 0; i < 50; i++) {
+        counter.handleClick();
+      }
+
+      expect(counter['timesClicked']).toBe(50);
+      expect(element.innerHTML).toBe('Count is 500');
+    });
   });
 });
 

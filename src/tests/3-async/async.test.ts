@@ -21,14 +21,14 @@ const testData: {input: number; expectedOutput: string}[] = [
 
 describe('fetchData', () => {
   describe('when correct id is passed into function', () => {
-    it('should return correct todo', async () => {
+    it('should successfully return correct todo', async () => {
       const todo = await fetchData(1);
       const expectedTodo: Todo = {userId: 1, id: 1, title: 'delectus aut autem', completed: false};
 
       expect(todo).toStrictEqual(expectedTodo);
     });
 
-    it('should return correct todo', async () => {
+    it('should successfully return correct todo', async () => {
       const todo = await fetchData(5);
       const expectedTodo: Todo = {
         userId: 1,

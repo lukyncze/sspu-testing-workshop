@@ -35,6 +35,16 @@ describe('Counter', () => {
     expect(element.innerHTML).toBe('Count is 0');
   });
 
+  it('should call handle click function', () => {
+    const handleClickSpy = jest.spyOn(counter, 'handleClick');
+
+    for (let i = 0; i < 4; i++) {
+      counter.handleClick();
+    }
+
+    expect(handleClickSpy).toHaveBeenCalledTimes(4);
+  });
+
   describe('when user clicks on it button', () => {
     it('should have correct button text', () => {
       expect(counter['timesClicked']).toBe(0);

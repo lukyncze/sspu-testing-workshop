@@ -9,7 +9,7 @@ export interface Todo {
 
 async function fetchData(id: number): Promise<Todo> {
   const {data} = await axios.get(`https://jsonplaceholder.typicode.com/todos/${id}`);
-  return data;
+  return data as Todo;
 }
 
 export default fetchData;

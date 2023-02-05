@@ -5,13 +5,16 @@
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>SŠPU Testing Workshop</title>
+    <link rel="stylesheet" href="src/app/assets/css/style.css" />
+    <script src="src/app/main.ts" type="module" defer></script>
   </head>
   <body>
-    <div id="app">
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src="./src/app/assets/svg/vite.svg" class="logo vite" alt="Vite logo" />
+    <main>
+      <div class="logos-links">
+        <a href="https://jestjs.io" target="_blank">
+          <img src="./src/app/assets/svg/jest.svg" class="logo jest" alt="Jest logo" />
         </a>
+
         <a href="https://www.typescriptlang.org/" target="_blank">
           <img
             src="./src/app/assets/svg/typescript.svg"
@@ -19,20 +22,19 @@
             alt="TypeScript logo"
           />
         </a>
-        <a href="https://jestjs.io" target="_blank">
-          <img src="./src/app/assets/svg/jest.svg" class="logo jest" alt="Jest logo" />
+
+        <a href="https://vitejs.dev" target="_blank">
+          <img src="./src/app/assets/svg/vite.svg" class="logo vite" alt="Vite logo" />
         </a>
-
-        <h1>SŠPU Testing Workshop</h1>
-        <p class="read-the-docs">Click on the logos to learn more.</p>
-
-        <div class="card">
-          <button id="counter" type="button"></button>
-        </div>
       </div>
-    </div>
 
-    <script type="module" src="src/app/main.ts"></script>
+      <h1>SŠPU Testing Workshop</h1>
+      <p class="read-the-docs">Click on the logos to learn more.</p>
+
+      <div class="interactive-button">
+        <button id="counter" type="button"></button>
+      </div>
+    </main>
   </body>
 </html>
 

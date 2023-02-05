@@ -49,11 +49,14 @@ h1 {
   padding: 1.5em;
   will-change: filter;
 }
-.logo:hover {
+.logo.vite:hover {
   filter: drop-shadow(0 0 2em #646cffaa);
 }
-.logo.vanilla:hover {
+.logo.typescript:hover {
   filter: drop-shadow(0 0 2em #3178c6aa);
+}
+.logo.jest:hover {
+  filter: drop-shadow(0 0 2em #c21325aa);
 }
 
 .card {
@@ -95,3 +98,4 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+

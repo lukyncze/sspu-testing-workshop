@@ -31,6 +31,34 @@ const bigTestData: {input: number; expectedOutput: string}[] = [
     input: 8,
     expectedOutput: 'quo adipisci enim quam ut ab',
   },
+  {
+    input: 9,
+    expectedOutput: 'molestiae perspiciatis ipsa',
+  },
+  {
+    input: 10,
+    expectedOutput: 'illo est ratione doloremque quia maiores aut',
+  },
+  {
+    input: 11,
+    expectedOutput: 'vero rerum temporibus dolor',
+  },
+  {
+    input: 12,
+    expectedOutput: 'ipsa repellendus fugit nisi',
+  },
+  {
+    input: 13,
+    expectedOutput: 'et doloremque nulla',
+  },
+  {
+    input: 14,
+    expectedOutput: 'repellendus sunt dolores architecto voluptatum',
+  },
+  {
+    input: 15,
+    expectedOutput: 'ab voluptatum amet voluptas',
+  },
 ];
 
 export default bigTestData;

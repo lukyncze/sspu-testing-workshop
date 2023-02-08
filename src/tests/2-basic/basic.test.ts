@@ -1,6 +1,6 @@
 import {containsDuplicate, hasExactString} from './basic';
 
-const shoppingList = ['diapers', 'kleenex', 'trash bags', 'paper towels', 'beer'];
+const shoppingList = ['bread', 'kleenex', 'trash bags', 'paper towels', 'beer'];
 
 describe('Shopping list', () => {
   describe('when the shopping list is empty', () => {
@@ -37,8 +37,8 @@ describe('hasExactString', () => {
       expect(hasExactString(shoppingList, 'beer')).toBe(true);
     });
 
-    it('diapers', () => {
-      expect(hasExactString(shoppingList, 'diapers')).toBe(true);
+    it('bread', () => {
+      expect(hasExactString(shoppingList, 'bread')).toBe(true);
     });
   });
 

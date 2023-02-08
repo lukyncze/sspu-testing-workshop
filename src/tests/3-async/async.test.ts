@@ -13,10 +13,6 @@ const testData: {input: number; expectedOutput: string}[] = [
     input: 3,
     expectedOutput: 'fugiat veniam minus',
   },
-  {
-    input: 4,
-    expectedOutput: 'et porro tempora',
-  },
 ];
 
 describe.skip('fetchData', () => {

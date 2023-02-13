@@ -17,7 +17,7 @@ const document: Document = {
 let element: HTMLButtonElement;
 let counter: Counter;
 
-describe.only('Counter', () => {
+describe('Counter', () => {
   beforeEach(() => {
     element = document.createElement('button');
     counter = new Counter(element);

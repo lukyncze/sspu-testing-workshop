@@ -1,9 +1,7 @@
 class Counter {
   private timesClicked = 0;
-  private element: HTMLButtonElement;
 
-  constructor(element: HTMLButtonElement) {
-    this.element = element;
+  constructor(private element: HTMLButtonElement) {
     this.printCount();
   }
 

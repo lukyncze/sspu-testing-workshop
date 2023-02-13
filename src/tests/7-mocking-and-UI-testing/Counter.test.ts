@@ -14,14 +14,10 @@ const document: Document = {
   },
 };
 
-Object.defineProperty(global, 'document', {
-  value: document,
-});
-
 let element: HTMLButtonElement;
 let counter: Counter;
 
-describe.skip('Counter', () => {
+describe.only('Counter', () => {
   beforeEach(() => {
     element = document.createElement('button');
     counter = new Counter(element);
